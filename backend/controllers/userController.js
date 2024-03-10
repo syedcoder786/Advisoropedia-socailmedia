@@ -9,9 +9,6 @@ import User from "../models/userModel.js";
 const registerUser = asyncHandler(async (req, res) => {
   const { email, password, name, profile_img } = req.body;
 
-  console.log(name);
-  console.log(profile_img);
-
   if (!email || !password) {
     return res.status(400);
   }

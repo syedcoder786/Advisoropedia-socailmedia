@@ -5,9 +5,6 @@ const fetchPosts = asyncHandler(async (req, res) => {
   try {
     const { page, limit } = req.body;
 
-    // console.log(page);
-    // console.log(limit);
-
     const pageno = Number(page);
     const limitno = Number(limit);
 
