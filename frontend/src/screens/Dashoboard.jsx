@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import DashboardComponent from "../components/DashboardComponent";
 import NavbarComponent from "../components/NavbarComponent";
 
@@ -15,14 +15,9 @@ const Dashoboard = () => {
     }
   }, [user]);
 
-  // useEffect(() => {
-  //   console.log("dashboard");
-  // }, []);
-
   return (
-    <div className="">
+    <div>
       <NavbarComponent />
-
       <DashboardComponent />
     </div>
   );

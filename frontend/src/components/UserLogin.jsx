@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 
@@ -28,9 +28,6 @@ const UserLogin = () => {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-    // console.log(errors);
-    console.log(data);
-
     dispatch(login(data));
   };
 
@@ -51,7 +48,6 @@ const UserLogin = () => {
   useEffect(() => {
     if (isSuccess) {
       console.log("login/success");
-      // navigate("/dashboard");
     }
 
     if (isError) {
@@ -71,7 +67,6 @@ const UserLogin = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           {errmsg && (
             <Alert color="failure" icon={HiInformationCircle} className="mb-4">
-              {/* <span className="font-medium">Info alert!</span>{" "} */}
               {errmsg}
             </Alert>
           )}
@@ -100,7 +95,6 @@ const UserLogin = () => {
               type={isPasswordVisible ? "password" : "text"}
               {...register("password", {
                 required: "Password is required",
-                // minLength: { value: 6, message: "Min length of password is 6" },
               })}
               color={errmsg ? "error" : "default"}
             />
@@ -147,12 +141,6 @@ const UserLogin = () => {
             </div>
           </div>
 
-          {/* {errors.password && (
-            <Alert color="failure" icon={HiInformationCircle} className="mb-4">
-              {errors.password.message}
-            </Alert>
-          )} */}
-
           <div className="text-left mb-2 mx-1">
             Create an account?{" "}
             <Link to="/">
@@ -162,11 +150,7 @@ const UserLogin = () => {
             </Link>
           </div>
 
-          <Button
-            type="submit"
-            className="w-full"
-            // onClick={handleSubmit(onSubmit)}
-          >
+          <Button type="submit" className="w-full">
             {isLoading && (
               <Spinner
                 aria-label="Spinner button example"

@@ -6,9 +6,7 @@ const DivLeft = () => {
     <>
       {/* profile */}
       <div className="m-auto">
-        <div className="h-24 bg-slate-800 cursor-pointer rounded">
-          {/* Top<p>Here</p> */}
-        </div>
+        <div className="h-24 bg-slate-800 cursor-pointer rounded"></div>
         <div className="mb-2">
           <img
             src={
@@ -18,14 +16,11 @@ const DivLeft = () => {
             }
             alt=""
             className="w-28 h-28 m-auto rounded-full -mt-10 mb-2"
-            // style={{top:"-20%"}}
           />
           <div className="text-center">
             <p className="text-lg font-semibold">
               {user?.name ? user.name : "Name"}
             </p>
-            {/* <p>This is bio</p>
-            <p>This is bio</p> */}
           </div>
         </div>
         <div className="rounded m-1 p-2" style={{ backgroundColor: "#303338" }}>

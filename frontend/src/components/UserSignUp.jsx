@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 
@@ -28,9 +28,6 @@ const UserSignUp = () => {
   }
 
   const onSubmit = async (data) => {
-    // console.log(errors);
-    console.log(data);
-
     dispatch(registerUser(data));
   };
 
@@ -52,7 +49,6 @@ const UserSignUp = () => {
     if (isSuccess) {
       console.log("register/success");
       toast.success("Welcome");
-      // navigate("/");
     }
 
     if (isError) {
@@ -72,7 +68,6 @@ const UserSignUp = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           {errmsg && (
             <Alert color="failure" icon={HiInformationCircle} className="mb-4">
-              {/* <span className="font-medium">Info alert!</span>{" "} */}
               {errmsg}
             </Alert>
           )}
@@ -91,7 +86,6 @@ const UserSignUp = () => {
           />
           {errors.email && (
             <Alert color="failure" icon={HiInformationCircle} className="mb-4">
-              {/* <span className="font-medium">Info alert!</span>{" "} */}
               {errors.email.message}
             </Alert>
           )}
@@ -151,7 +145,6 @@ const UserSignUp = () => {
 
           {errors.password && (
             <Alert color="failure" icon={HiInformationCircle} className="mb-4">
-              {/* <span className="font-medium">Info alert!</span>{" "} */}
               {errors.password.message}
             </Alert>
           )}
@@ -173,7 +166,6 @@ const UserSignUp = () => {
 
           {errors.confirm_password && (
             <Alert color="failure" icon={HiInformationCircle} className="mb-4">
-              {/* <span className="font-medium">Info alert!</span>{" "} */}
               {errors.confirm_password.message}
             </Alert>
           )}
@@ -183,7 +175,6 @@ const UserSignUp = () => {
             label="Name"
             type="text"
             {...register("name", {
-              // required: "name is required",
               minLength: { value: 3, message: "Min length of name is 3" },
             })}
             color={errors?.name ? "error" : "default"}
@@ -191,7 +182,6 @@ const UserSignUp = () => {
 
           {errors.name && (
             <Alert color="failure" icon={HiInformationCircle} className="mb-4">
-              {/* <span className="font-medium">Info alert!</span>{" "} */}
               {errors.name.message}
             </Alert>
           )}
@@ -213,7 +203,6 @@ const UserSignUp = () => {
                 required=""
                 {...register("checkbox", {
                   required: "Accept terms and condition",
-                  // minLength: { value: 6, message: "Min length of password is 6" },
                 })}
               />
             </div>
@@ -235,7 +224,6 @@ const UserSignUp = () => {
 
           {errors.checkbox && (
             <Alert color="failure" icon={HiInformationCircle} className="mb-4">
-              {/* <span className="font-medium">Info alert!</span>{" "} */}
               {errors.checkbox.message}
             </Alert>
           )}

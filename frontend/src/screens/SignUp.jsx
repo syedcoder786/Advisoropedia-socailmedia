@@ -11,7 +11,6 @@ const SignUp = () => {
             src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/08/Website-logo-1.png"
             className="w-72 m-8 "
           />
-          {/* border-2 border-cyan-200 rounded-md */}
           <div className="m-6 p-2">
             <img
               src="https://toppng.com/uploads/thumbnail/quotation-marks-blue-quotation-marks-11562960630snhp2i1ei7.png"

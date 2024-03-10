@@ -13,7 +13,6 @@ const DashboardComponent = () => {
   const { posts, hasMore } = useSelector((state) => state.post);
 
   useEffect(() => {
-    // console.log("fetching");
     dispatch(fetchPosts());
   }, []);
 
@@ -39,9 +38,6 @@ const DashboardComponent = () => {
           next={() => dispatch(fetchPosts())}
           hasMore={hasMore}
           loader={
-            // <center>
-            //   <h4 style={{ color: "white" }}>Loading/End of Post...</h4>
-            // </center>
             <div className="py-6 px-24">
               <Audio
                 heigth="500"
@@ -56,10 +52,7 @@ const DashboardComponent = () => {
         </InfiniteScroll>
       </div>
 
-      <div
-        className="right hidden md:block w-1/4 sticky top-14 p-1 h-full text-white " // -z-10  h-full border-l-2 border-l-slate-500
-        // style={{ height: "93vh" }}
-      >
+      <div className="right hidden md:block w-1/4 sticky top-14 p-1 h-full text-white">
         <DivRight />
       </div>
     </div>

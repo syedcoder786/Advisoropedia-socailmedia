@@ -34,7 +34,6 @@ const NavbarComponent = () => {
                 rounded
               />
             }
-            // className="relative z-10"
           >
             <Dropdown.Header>
               <span className="block text-sm">
@@ -65,12 +64,6 @@ const NavbarComponent = () => {
           <Navbar.Link href="#" className="text-white">
             About
           </Navbar.Link>
-          {/* <Navbar.Link href="#" className="text-white">
-            Services
-          </Navbar.Link>
-          <Navbar.Link href="#" className="text-white">
-            Pricing
-          </Navbar.Link> */}
           <Navbar.Link href="#" className="text-white">
             Contact
           </Navbar.Link>

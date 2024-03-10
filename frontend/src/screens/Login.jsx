@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import UserLogin from "../components/UserLogin";
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();

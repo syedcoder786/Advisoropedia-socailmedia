@@ -63,26 +63,14 @@ const Post = ({ user, title, img_url }) => {
               <img
                 className="w-5"
                 alt=""
-                src={
-                  //   "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/blue-like-button-icon.png"
-                  "https://pngimg.com/uploads/like/small/like_PNG85.png"
-                }
+                src={"https://pngimg.com/uploads/like/small/like_PNG85.png"}
               />
-              <h1
-                className="text-base  text-zinc-400 font-bold"
-                // style={like ? { color: "#3578E5", fontWeight: "600" } : {}}
-              >
-                Like
-              </h1>
+              <h1 className="text-base  text-zinc-400 font-bold">Like</h1>
             </div>
 
             <div
               className="w-1/2 flex gap-2 items-center justify-center p-2 rounded cursor-pointer hover:bg-gray-500"
               style={{ userSelect: "none" }}
-              //   onClick={() => {
-              //     console.log("testing");
-              //     commentRef.current.focus();
-              //   }}
             >
               <img
                 className="w-6"
