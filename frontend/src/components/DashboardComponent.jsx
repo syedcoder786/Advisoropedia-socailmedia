@@ -28,7 +28,7 @@ const DashboardComponent = () => {
   ));
 
   return (
-    <div className="flex justify-center m-auto bg-slate-900 mt-14">
+    <div className="flex justify-center m-auto bg-slate-900 mt-14 min-h-screen">
       <div className="left hidden md:block w-1/4 sticky h-full top-14 p-2 text-white">
         <DivLeft />
       </div>
